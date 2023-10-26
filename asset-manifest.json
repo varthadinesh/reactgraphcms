@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/reactgraphcms/static/css/main.6707debe.css",
+    "main.js": "/reactgraphcms/static/js/main.3a07fcf3.js",
+    "index.html": "/reactgraphcms/index.html",
+    "main.6707debe.css.map": "/reactgraphcms/static/css/main.6707debe.css.map",
+    "main.3a07fcf3.js.map": "/reactgraphcms/static/js/main.3a07fcf3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6707debe.css",
+    "static/js/main.3a07fcf3.js"
+  ]
+}
