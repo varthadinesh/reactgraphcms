@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/reactgraphcms/static/css/main.39e3fe61.css",
-    "main.js": "/reactgraphcms/static/js/main.83ca0322.js",
+    "main.css": "/reactgraphcms/static/css/main.fa404e46.css",
+    "main.js": "/reactgraphcms/static/js/main.7928f6a4.js",
     "index.html": "/reactgraphcms/index.html",
-    "main.39e3fe61.css.map": "/reactgraphcms/static/css/main.39e3fe61.css.map",
-    "main.83ca0322.js.map": "/reactgraphcms/static/js/main.83ca0322.js.map"
+    "main.fa404e46.css.map": "/reactgraphcms/static/css/main.fa404e46.css.map",
+    "main.7928f6a4.js.map": "/reactgraphcms/static/js/main.7928f6a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.39e3fe61.css",
-    "static/js/main.83ca0322.js"
+    "static/css/main.fa404e46.css",
+    "static/js/main.7928f6a4.js"
   ]
 }
