@@ -1,0 +1,19 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { ApolloProvider } from "react-apollo";
+import ApolloClient from "apollo-boost";
+
+const client = new ApolloClient({
+  uri: "https://api-ap-south-1.hygraph.com/v2/clnyf5xul7qot01us8e4ihv27/master"
+});
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>
+);
+
+// eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2OTc3MjM0NTUsImF1ZCI6WyJodHRwczovL2FwaS1hcC1zb3V0aC0xLmh5Z3JhcGguY29tL3YyL2NsbnNwbXI0bDFhN28wMXVuOXd3YTJkZGkvbWFzdGVyIiwibWFuYWdlbWVudC1uZXh0LmdyYXBoY21zLmNvbSJdLCJpc3MiOiJodHRwczovL21hbmFnZW1lbnQuZ3JhcGhjbXMuY29tLyIsInN1YiI6IjNkYmQyNGI5LTkwZGQtNDU5OC05NWE4LWIyYmZiYjg5ZjJmNCIsImp0aSI6ImNsbng4cG0zOTFkYnUwMXQ5ZmRldmZjaWoifQ.dnuGSQqkDsZ5ZQXEW6iOcE7oP6FJHxS5l5suShklkrjDwEpiZotYUmrcab5d6lGdvLLSmwWu6BoddPmZ7Q2gXpLhBczVGD3U99PIZZLkDIsnpdpa1K1wUgN9-GefhG92kUwpPc0iCa1DvZMKkvy3lyR-_4VYgswp_xo4WZkI0oyHC8r9UTJrvEiVwv70SW8kKfFjRgFsJL8EOckghNdpw7muMchylScKCBh6tiEf_Hh6QW1lpgA_oiU_wgVTvDtdD662DdkmN3QIdXycs3oMVHQCJMlR-ogknOsJrLkusze8IovwHT7pQzjrksn6dTpFIvX8kE5GxcW10zgoTT-VPpenBRC34aLo-oSvsltjJJHs-sgkCalSEOk4hN-Rbqnb5EC5dpt415JNJooMlmXj2nWbL82GP86JxLNk1t2kPesjFaxkVNjON0XIgXMux-k527cVY-xVpovhmh6ZUpZZVa3Bm0BVqeq6A7QPSxStZa233PpDcjdWb33NSL9iGuBfloDppk4sYHPXzLSV7cNlBvQag2vq8LkXGp-V_ESGuses4_V_7M8fz9rv6r1Q6EwTF33i69DEQoYSY_-fGk-IgPMoPdQtQNbevj1S5-gQa-Zc7EjkYUOKVQhV2SJjhqMmVOfTKKHZkEl2mSpvKyBCjARswsEzr3DBJFLAizBJsJU

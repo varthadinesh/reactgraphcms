@@ -1,0 +1,112 @@
+import gql from "graphql-tag";
+const DATA_QUERY = gql`
+query Assets {
+  assets {
+    createdAt
+    url
+    id
+    c
+    carrers
+    content
+    imageConnection {
+      url
+    }
+    connectionImageDescription
+    imageCloudNetwork {
+      url
+    }
+    cloudNetworkDescription
+    imageComputer {
+      url
+    }
+    computerDescription
+    imageRocket {
+      url
+    }
+    rocketDescription
+    currentOpeningsHeading
+    fileName
+    updatedAt
+    ds1
+    ds2
+    ds3
+    ds4
+    ds5
+    ds6
+    dsHead
+    dsDescription
+    dsDescription2
+    dsButton
+    react1
+    react2
+    react3
+    react4
+    react5
+    react6
+    react7
+    reactHead
+    reactDescription
+    reactDescription2
+    reactButton
+    analyst1
+    analyst2
+    analyst3
+    analyst4
+    analyst5
+    analystHead
+    analystDescription
+    analystDescription2
+    analystButton
+    aws1
+    aws2
+    aws3
+    aws4
+    aws5
+    aws6
+    aws7
+    awsHead
+    awsDescription
+    awsDescription2
+    awsButton
+    app1
+    app2
+    app3
+    app4
+    app5
+    app6
+    appHead
+    appDescription
+    appDescription2
+    appButton
+    dga1
+    dga2
+    dga3
+    dga4
+    dgaHead
+    dgaDescription
+    dgaDescription2
+    dgaButton
+    usaOpenings
+    hydOpenings
+    bangOpenings
+    openingsDetail
+    openingsMail
+    footerImage{
+      url
+    }
+    footerDescription
+    footerlinksHead
+    link1
+    link2
+    link3
+    link4
+    link5
+    link6
+    getInTouchHead
+    getInTouchLocation
+    getInTouchMail
+    followUsHead
+  }
+}
+`;
+export default DATA_QUERY;
