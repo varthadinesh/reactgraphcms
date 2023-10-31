@@ -5,49 +5,49 @@ import React from 'react';
 
 const Datadisplay = (props) => {
 
-    Aos.init();
-    console.log(props.product)
+  Aos.init();
+  console.log(props.product)
 
-    const handleOption = (e) => {
-      const joblocation = e.currentTarget.id;
-      if(joblocation === "usa"){
-        document.getElementById("usaopeningdisplay").style.display = "block";
-        document.getElementById("bangopeningdisplay").style.display = "none";
-        document.getElementById("hydopeningdisplay").style.display = "none";
-      }
-      else if(joblocation === "bang"){
-        document.getElementById("bangopeningdisplay").style.display = "block";
-        document.getElementById("hydopeningdisplay").style.display = "none";
-        document.getElementById("usaopeningdisplay").style.display = "none";
-      }
-      else if(joblocation === "hyd"){
-        document.getElementById("hydopeningdisplay").style.display = "block";
-        document.getElementById("bangopeningdisplay").style.display = "none";
-        document.getElementById("usaopeningdisplay").style.display = "none";
-      }
+  const handleOption = (e) => {
+    const joblocation = e.currentTarget.id;
+    if(joblocation === "usa"){
+      document.getElementById("usaopeningdisplay").style.display = "block";
+      document.getElementById("bangopeningdisplay").style.display = "none";
+      document.getElementById("hydopeningdisplay").style.display = "none";
     }
+    else if(joblocation === "bang"){
+      document.getElementById("bangopeningdisplay").style.display = "block";
+      document.getElementById("hydopeningdisplay").style.display = "none";
+      document.getElementById("usaopeningdisplay").style.display = "none";
+    }
+    else if(joblocation === "hyd"){
+      document.getElementById("hydopeningdisplay").style.display = "block";
+      document.getElementById("bangopeningdisplay").style.display = "none";
+      document.getElementById("usaopeningdisplay").style.display = "none";
+    }
+  }
 
-    const showModal = (e) => {
-        const clicked = e.currentTarget.id;
-        if(clicked === "ds"){
-          document.getElementById("showmod").innerHTML = `
-                  <div class='shadow rounded p-1 m-1'  style="border-bottom:8px solid red">
-                    <div class='mb-2 d-flex flex-wrap'>
-                      <span class='border p-1 m-1'>${props.product.ds1}</span>
-                      <span class='border p-1 m-1'>${props.product.ds2}</span>
-                      <span class='border p-1 m-1'>${props.product.ds3}</span>
-                      <span class='border p-1 m-1'>${props.product.ds4}</span>
-                      <span class='border p-1 m-1'>${props.product.ds5}</span>
-                      <span class='border p-1 m-1'>${props.product.ds6}</span>
-                    </div>
-                    <h6 class='text-danger text-center'>${props.product.dsHead}</h6>
-                    <p class='m-4'>${props.product.dsDescription2}</p>
-                  </div>
-          `
-        }
-        else if(clicked === "reactjs"){
-          document.getElementById("showmod").innerHTML = `
-          <div class='shadow rounded p-1 m-1' style="border-bottom:8px solid red">
+  const showModal = (e) => {
+    const clicked = e.currentTarget.id;
+    if(clicked === "ds"){
+      document.getElementById("showmod").innerHTML = `
+        <div class='shadow rounded p-1 m-1'  style="border-bottom:8px solid red">
+          <div class='mb-2 d-flex flex-wrap'>
+            <span class='border p-1 m-1'>${props.product.ds1}</span>
+            <span class='border p-1 m-1'>${props.product.ds2}</span>
+            <span class='border p-1 m-1'>${props.product.ds3}</span>
+            <span class='border p-1 m-1'>${props.product.ds4}</span>
+            <span class='border p-1 m-1'>${props.product.ds5}</span>
+            <span class='border p-1 m-1'>${props.product.ds6}</span>
+          </div>
+          <h6 class='text-danger text-center'>${props.product.dsHead}</h6>
+          <p class='m-4'>${props.product.dsDescription2}</p>
+        </div>
+      `
+    }
+    else if(clicked === "reactjs"){
+      document.getElementById("showmod").innerHTML = `
+        <div class='shadow rounded p-1 m-1' style="border-bottom:8px solid red">
           <div class='mb-2 d-flex flex-wrap'>
             <span class='border p-1 m-1'>${props.product.react1}</span>
             <span class='border p-1 m-1'>${props.product.react2}</span>
@@ -59,27 +59,27 @@ const Datadisplay = (props) => {
           </div>
           <h6 class='text-danger text-center'>${props.product.reactHead}</h6>
           <p class='m-4'>${props.product.reactDescription2}</p>      
+        </div>
+      `
+    }
+    else if(clicked === "analyst"){
+      document.getElementById("showmod").innerHTML = `
+        <div class='shadow rounded p-1 m-1' style="border-bottom:8px solid red">
+          <div class='mb-2 d-flex flex-wrap'>
+            <span class='border p-1 m-1'>${props.product.analyst1}</span>
+            <span class='border p-1 m-1'>${props.product.analyst2}</span>
+            <span class='border p-1 m-1'>${props.product.analyst3}</span>
+            <span class='border p-1 m-1'>${props.product.analyst4}</span>
+            <span class='border p-1 m-1'>${props.product.analyst5}</span>
           </div>
-          `
-        }
-        else if(clicked === "analyst"){
-          document.getElementById("showmod").innerHTML = `
-          <div class='shadow rounded p-1 m-1' style="border-bottom:8px solid red">
-                    <div class='mb-2 d-flex flex-wrap'>
-                      <span class='border p-1 m-1'>${props.product.analyst1}</span>
-                      <span class='border p-1 m-1'>${props.product.analyst2}</span>
-                      <span class='border p-1 m-1'>${props.product.analyst3}</span>
-                      <span class='border p-1 m-1'>${props.product.analyst4}</span>
-                      <span class='border p-1 m-1'>${props.product.analyst5}</span>
-                    </div>
-                    <h6 class='text-danger text-center'>${props.product.analystHead}</h6>
-                    <p class='m-4'>${props.product.analystDescription2}</p>      
-                  </div>
-          `
-        }
-        else if(clicked === "aws"){
-          document.getElementById("showmod").innerHTML = `
-          <div class='shadow rounded p-1 m-1' style="border-bottom:8px solid red">
+          <h6 class='text-danger text-center'>${props.product.analystHead}</h6>
+          <p class='m-4'>${props.product.analystDescription2}</p>      
+        </div>
+      `
+    }
+    else if(clicked === "aws"){
+      document.getElementById("showmod").innerHTML = `
+        <div class='shadow rounded p-1 m-1' style="border-bottom:8px solid red">
           <div class='mb-2 d-flex flex-wrap'>
             <span class='border p-1 m-1'>${props.product.aws1}</span>
             <span class='border p-1 m-1'>${props.product.aws2}</span>
@@ -92,11 +92,11 @@ const Datadisplay = (props) => {
           <h6 class='text-danger text-center'>${props.product.awsHead}</h6>
           <p class='m-4'>${props.product.awsDescription2}</p>      
         </div>
-          `
-        }
-        else if(clicked === "app"){
-          document.getElementById("showmod").innerHTML = `
-          <div class='shadow rounded p-1 m-1' style="border-bottom:8px solid red">
+      `
+    }
+    else if(clicked === "app"){
+      document.getElementById("showmod").innerHTML = `
+        <div class='shadow rounded p-1 m-1' style="border-bottom:8px solid red">
           <div class='mb-2 d-flex flex-wrap'>
             <span class='border p-1 m-1'>${props.product.app1}</span>
             <span class='border p-1 m-1'>${props.product.app2}</span>
@@ -108,11 +108,11 @@ const Datadisplay = (props) => {
           <h6 class='text-danger text-center'>${props.product.appHead}</h6>
           <p class='m-4'>${props.product.appDescription2}</p>      
         </div>
-          `
-        }
-        else if(clicked === "dga"){
-          document.getElementById("showmod").innerHTML = `
-          <div class='shadow rounded p-1 m-1' style="border-bottom:8px solid red">
+      `
+    }
+    else if(clicked === "dga"){
+      document.getElementById("showmod").innerHTML = `
+        <div class='shadow rounded p-1 m-1' style="border-bottom:8px solid red">
           <div class='mb-2 d-flex flex-wrap'>
             <span class='border p-1 m-1'>${props.product.dga1}</span>
             <span class='border p-1 m-1'>${props.product.dga2}</span>
@@ -122,17 +122,15 @@ const Datadisplay = (props) => {
           <h6 class='text-danger text-center'>${props.product.dgaHead}</h6>
           <p class='m-4'>${props.product.dgaDescription2}</p>      
         </div>
-          `
-        }
-    };
+      `
+    }
+  };
 
   return (
       <div className="">
         <img src={props.product.url} width="100%" alt='carrers logo'></img>
-
         {/* body */}
         <div className='m-5'>
-
           {/* Careers */}
           <h1 className='text-primary mb-4'>{props.product.carrers}</h1>
           <div className='row d-flex flex-column'>
@@ -175,7 +173,7 @@ const Datadisplay = (props) => {
             </div>
           </div>
 
-{/* usa opening */}
+          {/* usa opening */}
           <div className='overflow-x-auto' id='usaopeningdisplay'>
             <table className='table table-hover border mt-3'>
               <thead>
@@ -297,98 +295,15 @@ const Datadisplay = (props) => {
               </tbody>
             </table>
           </div>
-         
-          {/* <div className='d-flex m-2' data-aos="slide-right" data-aos-duration="1500" data-aos-once="true" >
-            <div className='shadow rounded p-1 m-1'  style={{borderBottom:"8px solid red"}}>
-              <div className='mb-2 d-flex flex-wrap'>
-                <span className='border p-1 m-1'>{props.product.ds1}</span>
-                <span className='border p-1 m-1'>{props.product.ds2}</span>
-                <span className='border p-1 m-1'>{props.product.ds3}</span>
-                <span className='border p-1 m-1'>{props.product.ds4}</span>
-                <span className='border p-1 m-1'>{props.product.ds5}</span>
-                <span className='border p-1 m-1'>{props.product.ds6}</span>
-              </div>
-              <h6 className='text-danger text-center'>{props.product.dsHead}</h6>
-              <p className='m-4'>{props.product.dsDescription}</p>
-              <div className='text-center'><button className='btn-primary border-0 rounded p-2' id='ds' onClick={showModal} data-bs-toggle="modal" data-bs-target="#myModal">{props.product.dsButton}</button></div>
-            </div>
-            <div className='shadow rounded p-1 m-1' style={{borderBottom:"8px solid red"}}>
-              <div className='mb-2 d-flex flex-wrap'>
-                <span className='border p-1 m-1'>{props.product.react1}</span>
-                <span className='border p-1 m-1'>{props.product.react2}</span>
-                <span className='border p-1 m-1'>{props.product.react3}</span>
-                <span className='border p-1 m-1'>{props.product.react4}</span>
-                <span className='border p-1 m-1'>{props.product.react5}</span>
-                <span className='border p-1 m-1'>{props.product.react6}</span>
-                <span className='border p-1 m-1'>{props.product.react7}</span>
-              </div>
-              <h6 className='text-danger text-center'>{props.product.reactHead}</h6>
-              <p className='m-4'>{props.product.reactDescription}</p>
-              <div className='text-center'><button className='btn-primary border-0 rounded p-2' id='reactjs' onClick={showModal}  data-bs-toggle="modal" data-bs-target="#myModal">{props.product.reactButton}</button></div>
-            </div>
-            <div className='shadow rounded p-1 m-1' style={{borderBottom:"8px solid red"}}>
-              <div className='mb-2 d-flex flex-wrap'>
-                <span className='border p-1 m-1'>{props.product.analyst1}</span>
-                <span className='border p-1 m-1'>{props.product.analyst2}</span>
-                <span className='border p-1 m-1'>{props.product.analyst3}</span>
-                <span className='border p-1 m-1'>{props.product.analyst4}</span>
-                <span className='border p-1 m-1'>{props.product.analyst5}</span>
-              </div>
-              <h6 className='text-danger text-center'>{props.product.analystHead}</h6>
-              <p className='m-4'>{props.product.analystDescription}</p>
-              <div className='text-center mb-1'><button className='btn-primary border-0 rounded p-2' id='analyst' onClick={showModal}  data-bs-toggle="modal" data-bs-target="#myModal">{props.product.analystButton}</button></div>
-            </div>
-          </div>
-
-          <div className=' d-flex m-2' data-aos="slide-right" data-aos-duration="1500" data-aos-once="true" >
-            <div className='shadow rounded p-1 m-1' style={{borderBottom:"8px solid red"}}>
-              <div className='mb-2 d-flex flex-wrap'>
-                <span className='border p-1 m-1'>{props.product.aws1}</span>
-                <span className='border p-1 m-1'>{props.product.aws2}</span>
-                <span className='border p-1 m-1'>{props.product.aws3}</span>
-                <span className='border p-1 m-1'>{props.product.aws4}</span>
-                <span className='border p-1 m-1'>{props.product.aws5}</span>
-                <span className='border p-1 m-1'>{props.product.aws6}</span>
-                <span className='border p-1 m-1'>{props.product.aws7}</span>
-              </div>
-              <h6 className='text-danger text-center'>{props.product.awsHead}</h6>
-              <p className='m-4'>{props.product.awsDescription}</p>
-              <div className='text-center'><button className='btn-primary border-0 rounded p-2' id='aws' onClick={showModal}  data-bs-toggle="modal" data-bs-target="#myModal">{props.product.awsButton}</button></div>
-            </div>
-            <div className='shadow rounded p-1 m-1' style={{borderBottom:"8px solid red"}}>
-              <div className='mb-2 d-flex flex-wrap'>
-                <span className='border p-1 m-1'>{props.product.app1}</span>
-                <span className='border p-1 m-1'>{props.product.app2}</span>
-                <span className='border p-1 m-1'>{props.product.app3}</span>
-                <span className='border p-1 m-1'>{props.product.app4}</span>
-                <span className='border p-1 m-1'>{props.product.app5}</span>
-                <span className='border p-1 m-1'>{props.product.app6}</span>
-              </div>
-              <h6 className='text-danger text-center'>{props.product.appHead}</h6>
-              <p className='m-4'>{props.product.appDescription}</p>
-              <div className='text-center'><button className='btn-primary border-0 rounded p-2' id='app' onClick={showModal}  data-bs-toggle="modal" data-bs-target="#myModal">{props.product.appButton}</button></div>
-            </div>
-            <div className='shadow rounded p-1 m-1' style={{borderBottom:"8px solid red"}}>
-              <div className='mb-2 d-flex flex-wrap'>
-                <span className='border p-1 m-1'>{props.product.dga1}</span>
-                <span className='border p-1 m-1'>{props.product.dga2}</span>
-                <span className='border p-1 m-1'>{props.product.dga3}</span>
-                <span className='border p-1 m-1'>{props.product.dga4}</span>
-              </div>
-              <h6 className='text-danger text-center'>{props.product.dgaHead}</h6>
-              <p className='m-4'>{props.product.dgaDescription}</p>
-              <div className='text-center mb-1'><button className='btn-primary border-0 rounded p-2' id='dga' onClick={showModal}  data-bs-toggle="modal" data-bs-target="#myModal">{props.product.dgaButton}</button></div>
-            </div>
-          </div> */}
         </div>
 
         {/* Footer */}
-        <div className='d-md-flex p-5' style={{backgroundColor:"#e6e4e4"}}>
-          <div className='col-md-3 mr-md-5'>
+        <div className='d-lg-flex p-5' style={{backgroundColor:"#e6e4e4"}}>
+          <div className='col-lg-3 mr-lg-5 col-md-6 col-xs-12'>
             <img src={props.product.footerImage.url} height="40px" alt='footer'></img>
             <p className='mt-5 text-secondary'>{props.product.footerDescription}</p>
           </div>
-          <div className='col-md-3'>
+          <div className='col-lg-3 col-md-6 col-xs-12'>
             <h5 className=''>{props.product.footerlinksHead}</h5>
             <ul className='list-inline d-flex' id='keylinks'>
               <div className='mr-5'>
@@ -403,21 +318,33 @@ const Datadisplay = (props) => {
               </div>
             </ul>
           </div>
-          <div className='col-md-3'>
+          <div className='col-lg-3 col-md-6 col-xs-12'>
             <h5>{props.product.getInTouchHead}</h5>
             <div className='d-flex flex-column'>
               <span className='text-secondary'><i className="bi bi-geo-alt-fill"></i>&nbsp;{props.product.getInTouchLocation}</span>
               <span className='text-secondary'><i className="bi bi-envelope-fill"></i>&nbsp;
-                <a href='mailto:someone@example.com' className='text-secondary link-underline link-underline-opacity-0'>{props.product.getInTouchMail}</a>
+                <a href='mailto:info@infomericainc.com' className='text-secondary link-underline link-underline-opacity-0'>{props.product.getInTouchMail}</a>
               </span>
             </div>
           </div>
-          <div className='col-md-3'>
+          <div className='col-lg-3 col-md-6 col-xs-12'>
             <h5>{props.product.followUsHead}</h5>
             <div className='mt-2 d-flex'>
-              <div className='mr-2 border-0 rounded text-primary' style={{ fontSize:"30px"}} id='followusfacebook'><i className="bi bi-facebook"></i></div>
-              <div className='mr-2 ml-2 border-0 rounded text-danger' style={{fontSize:"30px"}} id='followusyoutube'><i className="bi bi-youtube"></i></div>
-              <div className='mr-2 ml-2 border-0 rounded text-info' style={{fontSize:"30px"}} id='followuslinkedin'><i className="bi bi-linkedin"></i></div>
+              <div className='mr-2 border-0 rounded' style={{ fontSize:"30px"}} id='followusfacebook'>
+                <a href='https://www.facebook.com/Infomerica1998/' className='text-primary' target='blank'>
+                  <i className="bi bi-facebook"></i>
+                </a>
+              </div>
+              <div className='mr-2 ml-2 border-0 rounded' style={{fontSize:"30px"}} id='followusyoutube'>
+                <a href='https://www.youtube.com/results?search_query=infomerica' className='text-danger' target='blank'>
+                  <i className="bi bi-youtube"></i>
+                </a>
+              </div>
+              <div className='mr-2 ml-2 border-0 rounded' style={{fontSize:"30px"}} id='followuslinkedin'>
+                <a href='https://www.linkedin.com/company/infomerica' className='text-info' target='blank'>
+                  <i className="bi bi-linkedin"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -434,12 +361,12 @@ const Datadisplay = (props) => {
               <div className="modal-body" id='showmod'></div>
               <div className='text-center m-2'>
                 <b>{props.product.openingsDetail}</b>
-                <span className='border fs-4 p-2 rounded-pill text-dark bg-warning'><b>{props.product.openingsMail}</b></span>
+                <span className='border badge fs-4 text-wrap rounded-pill text-dark bg-warning'><b>{props.product.openingsMail}</b></span>
               </div>
 
               <div className="modal-footer">
                 <button className='btn-primary border-0 rounded p-2'>
-                  <a href="mailto:someone@example.com" className='text-white link-underline link-underline-opacity-0'>Send Resume</a>
+                  <a href="mailto:info@infomericainc.com" className='text-white link-underline link-underline-opacity-0'>Send Resume</a>
                 </button>
                 <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Close</button>
               </div>
